@@ -6,7 +6,7 @@ public class cs3 {
 	public static void main(String[] args)
 	{
 		//Write a function that tests whether a string is a palindrome
-		//3. ödev
+		//3. Ã¶dev
 		
 		
 		System.out.println("Lutfen bir kelime girin:");
@@ -18,14 +18,22 @@ public class cs3 {
 	
 	public static boolean palindrome(String wordf)
 	{
+		int flag=1;
 		for(int i=0; i<wordf.length();i++)
 		{
-			if(wordf.charAt(i) == wordf.charAt( (wordf.length() )-1-i ))
+			if(wordf.charAt(i) != wordf.charAt( (wordf.length() )-1-i ))
 			{
-				return true;
+				flag=0;
+				return false;
 			}
+			if(flag==0)
+			{
+				break;
+			}
+			
+			
 		}
-		return false;
+		return true;
 	}
 
 }
